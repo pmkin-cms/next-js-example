@@ -1,0 +1,10 @@
+.markdown {
+  color: #1e293b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.markdown p {
+  margin-bottom: 1.5rem;
+}

@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js 14 Blog with PMKIN CMS
+
+This project showcases a modern blog built with Next.js 14, leveraging
+[PMKIN CMS](https://pmkin.io) for content management and GraphQL API for data
+fetching. The blog posts are rendered using the `marked` library, offering a
+seamless markdown experience.
+
+## Features
+
+- **Next.js 14**: Utilizes the latest features of Next.js for fast,
+  server-rendered React applications.
+- **PMKIN CMS Integration**: Fetches blog posts via PMKIN's GraphQL API,
+  ensuring dynamic content management.
+- **Markdown Rendering**: Uses the `marked` library to convert markdown content
+  into HTML, enabling rich post formatting.
+- **Responsive Design**: Ensures a great reading experience on devices of all
+  sizes.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to get your development environment set up.
+
+### Prerequisites
+
+- Node.js (version 18 or later)
+- Yarn package manager
+
+### Installation
+
+Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/pmkin-cms/next-js-example
+cd next-js-example
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
 
-## Learn More
+Create a .env.local file at the root of your project and add your PMKIN CMS API
+credentials:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+PMKIN_API_KEY=your_api_key
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Start the development server:
 
-## Deploy on Vercel
+```bash
+yarn dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Visit `http://localhost:3000` in your browser to view the blog.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for
+details.
