@@ -1,9 +1,12 @@
 # Next.js 14 Blog with PMKIN CMS
 
 This project showcases a modern blog built with Next.js 14, leveraging
-[PMKIN CMS](https://pmkin.io) for content management and GraphQL API for data
+[PMKIN CMS](https://pmkin.io) for content management and its GraphQL API for data
 fetching. The blog posts are rendered using the `marked` library, offering a
 seamless markdown experience.
+
+You can see it live at:
+https://pmkin-next-js-example.vercel.app/
 
 ## Features
 
