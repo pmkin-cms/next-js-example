@@ -1,7 +1,7 @@
 import { marked } from 'marked'
 import type { ReactElement } from 'react'
 
-import { findPost } from '../lib/posts'
+import { pmkin } from '../lib/pmkin'
 
 import '../markdown.css'
 
@@ -10,12 +10,16 @@ interface PostProps {
 }
 
 export async function Post({ slug }: PostProps): Promise<ReactElement> {
-  const post = await findPost(slug)
+  const post = await pmkin.findDocumentBySlug(decodeURIComponent(slug))
+
+  if (!post) {
+    return <div>Post not found</div>
+  }
 
   const html = marked.parse(post.markdown)
 
   return (
-    <div className="w-full max-w-3xl mx-auto p-4 md:p-8 box-border space-y-6 text-gray-700">
+    <div className="w-full mx-auto p-4 md:p-8 box-border space-y-6 prose lg:prose-xl">
       <h1 className="text-xl font-semibold text-black">{post.title}</h1>
 
       <div

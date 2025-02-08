@@ -1,14 +1,18 @@
 import { Metadata } from 'next'
 
 import { Post } from '@/app/components/post'
-import { findPost } from '@/app/lib/posts'
+import { pmkin } from '@/app/lib/pmkin'
 
 type Props = {
   params: { slug: string }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await findPost(params.slug)
+  const post = await pmkin.findDocumentBySlug(decodeURIComponent(params.slug))
+
+  if (!post) {
+    return { title: 'Post not found' }
+  }
 
   return {
     title: post.title,
